@@ -7,8 +7,10 @@ export default {
   theme: {
     extend: {},
     colors: {
-      'light': 'rgba(255, 255, 255, 0.795)',
-      'dark': 'rgb(15, 23, 42)',
+      'light': '#DBE2EF',
+      'dark': '#000000',
+      'transparent': '#000000BB',
+      'blue': '#3F72AFBB',
     },
   },
   plugins: [],

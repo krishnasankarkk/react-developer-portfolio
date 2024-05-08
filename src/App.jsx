@@ -1,34 +1,42 @@
-// import { useState } from 'react'
+import { useState, useLayoutEffect } from 'react'
+
+import Navbar from './components/Navbar'
+import Loading from './components/Loading'
+import CustomCursor from './components/CustomCursor'
+
 import './App.css'
 
 function App() {
+  const [loading, setLoading] = useState(true)
+  const [isHovering, setIsHovering] = useState(true)
+
+  useLayoutEffect(()=>{
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, [])
+
+  const handleMouseEnter = () => {
+    setIsHovering(true);
+  };
+
+  const handleMouseLeave = () => {
+    setTimeout(() => {
+      setIsHovering(false);
+    }, 500);
+  };
 
   return (
-    <div className='flex flex-row items-center justify-between p-4'>
-      <div className='flex flex-row gap-1 font-bold text-2xl cursor-pointer relative w-[18rem]'>
-        <span className="letter">k</span>
-        <span className="letter">r</span>
-        <span className="letter">i</span>
-        <span className="letter">s</span>
-        <span className="letter">h</span>
-        <span className="letter">n</span>
-        <span className="letter">a</span>
-        <span className="letter">s</span>
-        <span className="letter">a</span>
-        <span className="letter">n</span>
-        <span className="letter">k</span>
-        <span className="letter">a</span>
-        <span className="letter">r</span>
-        <span className="letter">.</span>
-        <span className="letter">d</span>
-        <span className="letter">e</span>
-        <span className="letter">v</span>
-        <div className="cursor absolute left-2 bottom-0 h-1 w-4 bg-light"></div>
+    <div className='w-full h-[100vh] relative flex flex-col overflow-hidden items-center justify-center bg-dark'>
+      <CustomCursor hovering={isHovering}/>
+      {loading ? (
+        <Loading />
+      ):(<></>)}
+      <Navbar />
+      <div className="flex flex-row items-center justify-center gap-4 w-[100%] h-full">
+        <p className='text-6xl font-bold' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>Hi, I am Krishnasankar</p>
       </div>
-      <div className="flex flex-col gap-2 items-end cursor-pointer">
-        <div className="w-8 h-1 bg-light rounded-full"></div>
-        <div className="w-4 h-1 bg-light rounded-full"></div>
-      </div>
+      
     </div>
   )
 }
