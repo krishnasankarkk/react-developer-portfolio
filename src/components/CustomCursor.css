@@ -1,0 +1,32 @@
+.ripple-container {
+    position: absolute;
+    width: 200px; /* Adjust according to your layout */
+    height: 200px; /* Adjust according to your layout */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+.ripple:nth-child(1) {
+    transform: scale(0);
+    animation: none;
+    animation: rippleEffect 1.8s ease-out infinite;
+}
+.ripple:nth-child(2) {
+    animation: none;
+    animation: rippleEffectBig 1.9s ease-out .1s infinite;
+}
+
+@keyframes rippleEffect {
+100% {
+    transform: scale(10);
+    opacity: 0;
+}
+}
+@keyframes rippleEffectBig {
+100% {
+    transform: scale(20);
+    opacity: 0;
+}
+}
+  
