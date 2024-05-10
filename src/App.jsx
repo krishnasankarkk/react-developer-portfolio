@@ -51,7 +51,7 @@ function App() {
       ):(<></>)}
       <Navbar theme={isLightMode} />
       <About theme={isLightMode} />
-      <Footer />
+      <Footer theme={isLightMode} />
       <img 
         className='fixed top-20 right-6 z-50'
         src={`${isLightMode?'moon.png' : 'sun.png'}`} 

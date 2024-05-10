@@ -27,17 +27,17 @@ function Menu(props) {
   }
 
     return (
-      <div className="options relative z-50 text-xl">
-        <div className="flex flex-col gap-2 items-end p-8 z-50" onMouseDownCapture={handleMouseDown}>
+      <div className="options relative z-0 text-xl">
+        <div className="flex flex-col gap-2 items-end p-8 z-0" onMouseDownCapture={handleMouseDown}>
           <div id="option1" className={`${props.theme ? 'bg-dark' : 'bg-light'} w-[2rem] h-1 rounded-full`}></div>
           <div id="option2" className={`${props.theme ? 'bg-dark' : 'bg-light'} w-[1rem] h-1 rounded-full`}></div>
         </div>
         {showMenu ? (
-          <div className={`${props.theme?'bg-light':'bg-dark'} menu flex flex-col md:flex-row items-center justify-start gap-6 absolute p-6 md:top-0 md:right-20 top-24 right-2 h-[100vh] md:h-auto w-auto rounded-xl -z-30`}>
+          <div className={`${props.theme?'bg-light':'bg-dark'} menu flex flex-col md:flex-row items-center justify-start gap-6 absolute p-6 md:top-0 md:right-20 top-24 -right-2 h-[100vh] md:h-auto w-auto rounded-xl z-30`}>
             <a
               href={Resume} 
               download="Resume-Krishnasankar.pdf"
-              className={`transition-all duration-200 hover:scale-110 ${props.theme ? 'hover:text-blue' : 'hover:text-green'} flex flex-row items-center justify-start gap-2 mr-4`}
+              className={`transition-all duration-200 hover:scale-110 ${props.theme ? 'hover:text-blue' : 'hover:text-green'} cursor-none flex flex-row items-center justify-start gap-2 mr-4`}
               onMouseEnter={handleResumeEnter}
               onMouseLeave={handleResumeLeave}
             >
