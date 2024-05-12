@@ -1,3 +1,45 @@
 #cursor {
     z-index: 999999;
 }
+.percentbar {
+    animation: fill 1s ease-out;
+}
+@keyframes fill {
+    from {
+        transform-origin: left center;
+        transform: scaleX(0);
+    }
+    to {
+        transform-origin: left center;
+        transform: scaleX(1);
+    }
+}
+.background {
+    animation: scale 8s ease-out alternate;
+    position: fixed;
+    top: 25%;
+    left: 30%;
+}
+@keyframes scale {
+    0% {
+        scale: 50%;
+    }
+    100% {
+        scale: 100%;
+    }
+}
+@keyframes page-transition {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@media screen and (max-width:576px) {
+    .background {
+        left: 0;
+        width: 400px !important;
+        height: 400px !important;
+    }
+}

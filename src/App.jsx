@@ -1,16 +1,23 @@
 import { useState, useLayoutEffect } from 'react'
+import { CSSTransition } from 'react-transition-group'
 
 import Navbar from './components/Navbar'
 import Loading from './components/Loading'
 import CustomCursor from './components/CustomCursor'
 import Footer from './components/Footer'
 import About from './components/About'
+import Skills from './components/Skills'
+import Experience from './components/Experience'
+import Projects from './components/Projects'
+import Contact from './components/Contact'
 
 import './App.css'
 
 function App() {
   const [loading, setLoading] = useState(true)
   const [isLightMode, setIsLightMode] = useState(false)
+  const [onPage, setOnPage] = useState('home')
+  const [showMenu, setShowMenu] = useState(false)
 
   useLayoutEffect(()=>{
     setTimeout(() => {
@@ -20,6 +27,9 @@ function App() {
 
   const changeTheme = () => {
     setIsLightMode(!isLightMode)
+  }
+  const handleMenuChange = (e) => {
+    setOnPage(e.currentTarget.id)
   }
   // const rippleContainer = document.getElementById('ripple-container');
   // const ripple1 = document.getElementById('ripple1');
@@ -45,12 +55,30 @@ function App() {
     <div 
       className={`z-0 w-full h-[100vh] relative flex flex-col overflow-hidden items-center justify-center ${isLightMode ? 'bg-light text-dark' : 'bg-dark'}`}
     >
+    <br /><br />
       <CustomCursor theme={isLightMode}/>
       {loading ? (
         <Loading />
       ):(<></>)}
-      <Navbar theme={isLightMode} />
-      <About theme={isLightMode} />
+      <Navbar 
+        theme={isLightMode} 
+        menuChange={handleMenuChange} 
+        showMenu={showMenu}  
+        setShowMenu={setShowMenu}  
+      />
+      {onPage == 'home' ? (
+        <About theme={isLightMode} />
+      ) : onPage == 'skills' ? (
+        <Skills theme={isLightMode} />
+      ) : onPage == 'experience' ? (
+        <Experience theme={isLightMode} />
+      ) : onPage == 'projects' ? (
+        <Projects theme={isLightMode} />
+      ) : onPage == 'contact' ? (
+        <Contact theme={isLightMode} />
+      ) : (
+        <></>
+      )}
       <Footer theme={isLightMode} />
       <img 
         className='fixed top-20 right-6 z-50'

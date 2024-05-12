@@ -1,0 +1,26 @@
+.timeline {
+    animation: scaleX .4s ease-out;
+}
+@keyframes scaleX {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(100%);
+    }
+}
+.triangle {
+    width: 700px;
+    height: 700px;
+    margin: 1em auto;
+    background-image: radial-gradient(circle at 100% 0, transparent 0%, transparent 700px, rgb(255, 255, 255) 700px);
+  }
+
+@media screen and (max-width:576px) {
+    .timeline {
+        display: none !important;
+    }
+    .timeline-mobile {
+        display: flex !important;
+    }
+}

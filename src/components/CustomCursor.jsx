@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import './CustomCursor.css';
 
 const CustomCursor = (props) => {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [position, setPosition] = useState({ x: 500, y: 500 });
 
   // Update cursor position on mouse move
   const updateCursorPosition = (e) => {
