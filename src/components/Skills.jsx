@@ -3,7 +3,7 @@ import './Skills.css'
 function Skills(props) {
     return (
         <div 
-            className="skills flex flex-col items-center justify-center w-[100%] h-full z-40 mt-16 md:m-0"
+            className="skills flex flex-col items-center justify-center w-[100%] h-full z-40 mt-0 mb-8 md:m-0 overflow-auto"
             id=""
         >
         <br />
