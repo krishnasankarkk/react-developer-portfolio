@@ -11,8 +11,8 @@ function Experience(props) {
            <p className="font-extrabold text-xl"><span className={`${props.theme ? 'text-blue' : 'text-green'}`}>EXPERIENCE</span></p>
            <br />
            <div className="timeline w-[90%] flex flex-col items-center gap-20">
-                <div className="flex flex-row w-full justify-around">
-                    <div className={`w-[90%] flex flex-col gap-2 ${props.theme ? 'bg-blue' : 'bg-green'} bg-opacity-10 p-4 rounded-xl shadow-md shadow-[black] z-30`}>
+                <div className="flex flex-row w-full justify-center gap-2">
+                    <div className={`w-[30%] flex flex-col gap-2 ${props.theme ? 'bg-blue' : 'bg-green'} bg-opacity-10 p-4 rounded-xl shadow-md shadow-[black] z-30`}>
                         <span className={`${props.theme ? 'text-dark' : 'text-light'} text-xl font-semibold`}>Learning Web Development</span>
                         <span className={`${props.theme ? 'text-dark' : 'text-light'} text-md font-semibold`}>Self Learning</span>
                         <span className={`font-bold ${props.theme ? 'text-blue' : 'text-green'}`}>June 2021 - June 2022</span>
@@ -25,7 +25,7 @@ function Experience(props) {
                             <span className={`${props.theme ? 'bg-blue' : 'bg-green'} font-semibold bg-opacity-10 p-3 pt-1 pb-1 rounded-full`}>Git</span>
                         </div>
                     </div>
-                    <div className={`w-[90%] flex flex-col gap-2 ${props.theme ? 'bg-blue' : 'bg-green'} bg-opacity-10 p-4 rounded-xl shadow-md shadow-[black] z-30`}>
+                    <div className={`w-[30%] flex flex-col gap-2 ${props.theme ? 'bg-blue' : 'bg-green'} bg-opacity-10 p-4 rounded-xl shadow-md shadow-[black] z-30`}>
                         <span className={`${props.theme ? 'text-dark' : 'text-light'} text-xl font-semibold`}>Full Stack Developer</span>
                         <span className={`${props.theme ? 'text-dark' : 'text-light'} text-md font-semibold`}>Radianz Infotech</span>
                         <span className={`font-bold ${props.theme ? 'text-blue' : 'text-green'}`}>June 2022 - May 2023</span>
@@ -40,7 +40,7 @@ function Experience(props) {
                             <span className={`${props.theme ? 'bg-blue' : 'bg-green'} font-semibold bg-opacity-10 p-3 pt-1 pb-1 rounded-full`}>Git</span>
                         </div>
                     </div>
-                    <div className={`w-[90%] flex flex-col gap-2 ${props.theme ? 'bg-blue' : 'bg-green'} bg-opacity-10 p-4 rounded-xl shadow-md shadow-[black] z-30`}>
+                    <div className={`w-[30%] flex flex-col gap-2 ${props.theme ? 'bg-blue' : 'bg-green'} bg-opacity-10 p-4 rounded-xl shadow-md shadow-[black] z-30`}>
                         <span className={`${props.theme ? 'text-dark' : 'text-light'} text-xl font-semibold`}>Freelance Web Developer</span>
                         <span className={`${props.theme ? 'text-dark' : 'text-light'} text-md font-semibold`}>Self Employed</span>
                         <span className={`font-bold ${props.theme ? 'text-blue' : 'text-green'}`}>May 2023 - Today</span>
