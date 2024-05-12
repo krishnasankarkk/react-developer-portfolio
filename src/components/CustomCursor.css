@@ -16,6 +16,22 @@
     animation: none;
     animation: rippleEffectBig 1.9s ease-out .1s infinite;
 }
+.pointer {
+    border-radius: 50% !important;
+    scale: 150%;
+    transition-duration: .3s !important;
+    border: .4rem solid;
+    background-color: black !important;
+}
+
+@keyframes pointer {
+    0% {
+        scale: 100%;
+    }
+    100% {
+        scale: 150%;
+    }
+}
 
 @keyframes rippleEffect {
 100% {

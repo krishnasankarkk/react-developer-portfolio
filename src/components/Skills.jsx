@@ -24,7 +24,7 @@ function Skills(props) {
                                 <p>HTML</p>
                                 <p className="ml-auto">90%</p>
                             </span>
-                            <div className={`w-full h-4 ${props.theme ? 'bg-dark' : 'bg-light' } rounded-full relative bg-opacity-50`}>
+                            <div className={`w-full h-4 ${props.theme ? 'bg-dark' : 'bg-light' } rounded-full relative bg-opacity-20`}>
                                 <div className={`w-[90%] h-4 ${props.theme ? 'bg-blue' : 'bg-green'} rounded-full absolute left-0 percentbar`}>
                                 </div>    
                             </div>
@@ -35,7 +35,7 @@ function Skills(props) {
                                 <p>CSS</p>
                                 <p className="ml-auto">90%</p>
                             </span>
-                            <div className={`w-full h-4 ${props.theme ? 'bg-dark' : 'bg-light' } rounded-full relative bg-opacity-50`}>
+                            <div className={`w-full h-4 ${props.theme ? 'bg-dark' : 'bg-light' } rounded-full relative bg-opacity-20`}>
                                 <div className={`w-[90%] h-4 ${props.theme ? 'bg-blue' : 'bg-green'} rounded-full absolute left-0 percentbar`}>
                                 </div>    
                             </div>
@@ -46,7 +46,7 @@ function Skills(props) {
                                 <p>Tailwind Css</p>
                                 <p className="ml-auto">90%</p>
                             </span>
-                            <div className={`w-full h-4 ${props.theme ? 'bg-dark' : 'bg-light' } rounded-full relative bg-opacity-50`}>
+                            <div className={`w-full h-4 ${props.theme ? 'bg-dark' : 'bg-light' } rounded-full relative bg-opacity-20`}>
                                 <div className={`w-[90%] h-4 ${props.theme ? 'bg-blue' : 'bg-green'} rounded-full absolute left-0 percentbar`}>
                                 </div>    
                             </div>
@@ -57,7 +57,7 @@ function Skills(props) {
                                 <p>JavaScript</p>
                                 <p className="ml-auto">90%</p>
                             </span>
-                            <div className={`w-full h-4 ${props.theme ? 'bg-dark' : 'bg-light' } rounded-full relative bg-opacity-50`}>
+                            <div className={`w-full h-4 ${props.theme ? 'bg-dark' : 'bg-light' } rounded-full relative bg-opacity-20`}>
                                 <div className={`w-[90%] h-4 ${props.theme ? 'bg-blue' : 'bg-green'} rounded-full absolute left-0 percentbar`}>
                                 </div>    
                             </div>
@@ -68,7 +68,7 @@ function Skills(props) {
                                 <p>React Js</p>
                                 <p className="ml-auto">90%</p>
                             </span>
-                            <div className={`w-full h-4 ${props.theme ? 'bg-dark' : 'bg-light' } rounded-full relative bg-opacity-50`}>
+                            <div className={`w-full h-4 ${props.theme ? 'bg-dark' : 'bg-light' } rounded-full relative bg-opacity-20`}>
                                 <div className={`w-[90%] h-4 ${props.theme ? 'bg-blue' : 'bg-green'} rounded-full absolute left-0 percentbar`}>
                                 </div>    
                             </div>
@@ -79,7 +79,7 @@ function Skills(props) {
                                 <p>Vue Js</p>
                                 <p className="ml-auto">70%</p>
                             </span>
-                            <div className={`w-full h-4 ${props.theme ? 'bg-dark' : 'bg-light' } rounded-full relative bg-opacity-50`}>
+                            <div className={`w-full h-4 ${props.theme ? 'bg-dark' : 'bg-light' } rounded-full relative bg-opacity-20`}>
                                 <div className={`w-[70%] h-4 ${props.theme ? 'bg-blue' : 'bg-green'} rounded-full absolute left-0 percentbar`}>
                                 </div>    
                             </div>
@@ -90,7 +90,7 @@ function Skills(props) {
                                 <p>JQuery</p>
                                 <p className="ml-auto">80%</p>
                             </span>
-                            <div className={`w-full h-4 ${props.theme ? 'bg-dark' : 'bg-light' } rounded-full relative bg-opacity-50`}>
+                            <div className={`w-full h-4 ${props.theme ? 'bg-dark' : 'bg-light' } rounded-full relative bg-opacity-20`}>
                                 <div className={`w-[80%] h-4 ${props.theme ? 'bg-blue' : 'bg-green'} rounded-full absolute left-0 percentbar`}>
                                 </div>    
                             </div>
@@ -110,7 +110,7 @@ function Skills(props) {
                                 <p>Python</p>
                                 <p className="ml-auto">90%</p>
                             </span>
-                            <div className={`w-full h-4 ${props.theme ? 'bg-dark' : 'bg-light' } rounded-full relative bg-opacity-50`}>
+                            <div className={`w-full h-4 ${props.theme ? 'bg-dark' : 'bg-light' } rounded-full relative bg-opacity-20`}>
                                 <div className={`w-[90%] h-4 ${props.theme ? 'bg-blue' : 'bg-green'} rounded-full absolute left-0 percentbar`}>
                                 </div>    
                             </div>
@@ -121,7 +121,7 @@ function Skills(props) {
                                 <p>Python Django</p>
                                 <p className="ml-auto">80%</p>
                             </span>
-                            <div className={`w-full h-4 ${props.theme ? 'bg-dark' : 'bg-light' } rounded-full relative bg-opacity-50`}>
+                            <div className={`w-full h-4 ${props.theme ? 'bg-dark' : 'bg-light' } rounded-full relative bg-opacity-20`}>
                                 <div className={`w-[80%] h-4 ${props.theme ? 'bg-blue' : 'bg-green'} rounded-full absolute left-0 percentbar`}>
                                 </div>    
                             </div>
@@ -132,7 +132,7 @@ function Skills(props) {
                                 <p>Django REST API</p>
                                 <p className="ml-auto">80%</p>
                             </span>
-                            <div className={`w-full h-4 ${props.theme ? 'bg-dark' : 'bg-light' } rounded-full relative bg-opacity-50`}>
+                            <div className={`w-full h-4 ${props.theme ? 'bg-dark' : 'bg-light' } rounded-full relative bg-opacity-20`}>
                                 <div className={`w-[80%] h-4 ${props.theme ? 'bg-blue' : 'bg-green'} rounded-full absolute left-0 percentbar`}>
                                 </div>    
                             </div>
@@ -143,7 +143,7 @@ function Skills(props) {
                                 <p>Python Flask</p>
                                 <p className="ml-auto">60%</p>
                             </span>
-                            <div className={`w-full h-4 ${props.theme ? 'bg-dark' : 'bg-light' } rounded-full relative bg-opacity-50`}>
+                            <div className={`w-full h-4 ${props.theme ? 'bg-dark' : 'bg-light' } rounded-full relative bg-opacity-20`}>
                                 <div className={`w-[60%] h-4 ${props.theme ? 'bg-blue' : 'bg-green'} rounded-full absolute left-0 percentbar`}>
                                 </div>    
                             </div>
@@ -154,7 +154,7 @@ function Skills(props) {
                                 <p>PHP Laravel</p>
                                 <p className="ml-auto">70%</p>
                             </span>
-                            <div className={`w-full h-4 ${props.theme ? 'bg-dark' : 'bg-light' } rounded-full relative bg-opacity-50`}>
+                            <div className={`w-full h-4 ${props.theme ? 'bg-dark' : 'bg-light' } rounded-full relative bg-opacity-20`}>
                                 <div className={`w-[70%] h-4 ${props.theme ? 'bg-blue' : 'bg-green'} rounded-full absolute left-0 percentbar`}>
                                 </div>    
                             </div>
@@ -165,7 +165,7 @@ function Skills(props) {
                                 <p>Node Js</p>
                                 <p className="ml-auto">70%</p>
                             </span>
-                            <div className={`w-full h-4 ${props.theme ? 'bg-dark' : 'bg-light' } rounded-full relative bg-opacity-50`}>
+                            <div className={`w-full h-4 ${props.theme ? 'bg-dark' : 'bg-light' } rounded-full relative bg-opacity-20`}>
                                 <div className={`w-[70%] h-4 ${props.theme ? 'bg-blue' : 'bg-green'} rounded-full absolute left-0 percentbar`}>
                                 </div>    
                             </div>
@@ -186,7 +186,7 @@ function Skills(props) {
                                     <p>MySQL</p>
                                     <p className="ml-auto">90%</p>
                                 </span>
-                                <div className={`w-full h-4 ${props.theme ? 'bg-dark' : 'bg-light' } rounded-full relative bg-opacity-50`}>
+                                <div className={`w-full h-4 ${props.theme ? 'bg-dark' : 'bg-light' } rounded-full relative bg-opacity-20`}>
                                     <div className={`w-[90%] h-4 ${props.theme ? 'bg-blue' : 'bg-green'} rounded-full absolute left-0 percentbar`}>
                                     </div>    
                                 </div>
@@ -197,7 +197,7 @@ function Skills(props) {
                                     <p>PostgreSQL</p>
                                     <p className="ml-auto">90%</p>
                                 </span>
-                                <div className={`w-full h-4 ${props.theme ? 'bg-dark' : 'bg-light' } rounded-full relative bg-opacity-50`}>
+                                <div className={`w-full h-4 ${props.theme ? 'bg-dark' : 'bg-light' } rounded-full relative bg-opacity-20`}>
                                     <div className={`w-[90%] h-4 ${props.theme ? 'bg-blue' : 'bg-green'} rounded-full absolute left-0 percentbar`}>
                                     </div>    
                                 </div>
@@ -208,7 +208,7 @@ function Skills(props) {
                                     <p>MongoDB</p>
                                     <p className="ml-auto">80%</p>
                                 </span>
-                                <div className={`w-full h-4 ${props.theme ? 'bg-dark' : 'bg-light' } rounded-full relative bg-opacity-50`}>
+                                <div className={`w-full h-4 ${props.theme ? 'bg-dark' : 'bg-light' } rounded-full relative bg-opacity-20`}>
                                     <div className={`w-[80%] h-4 ${props.theme ? 'bg-blue' : 'bg-green'} rounded-full absolute left-0 percentbar`}>
                                     </div>    
                                 </div>
@@ -228,7 +228,7 @@ function Skills(props) {
                                     <p>AWS</p>
                                     <p className="ml-auto">90%</p>
                                 </span>
-                                <div className={`w-full h-4 ${props.theme ? 'bg-dark' : 'bg-light' } rounded-full relative bg-opacity-50`}>
+                                <div className={`w-full h-4 ${props.theme ? 'bg-dark' : 'bg-light' } rounded-full relative bg-opacity-20`}>
                                     <div className={`w-[90%] h-4 ${props.theme ? 'bg-blue' : 'bg-green'} rounded-full absolute left-0 percentbar`}>
                                     </div>    
                                 </div>
@@ -241,7 +241,7 @@ function Skills(props) {
                                     <p>Vercel</p>
                                     <p className="ml-auto">90%</p>
                                 </span>
-                                <div className={`w-full h-4 ${props.theme ? 'bg-dark' : 'bg-light' } rounded-full relative bg-opacity-50`}>
+                                <div className={`w-full h-4 ${props.theme ? 'bg-dark' : 'bg-light' } rounded-full relative bg-opacity-20`}>
                                     <div className={`w-[90%] h-4 ${props.theme ? 'bg-blue' : 'bg-green'} rounded-full absolute left-0 percentbar`}>
                                     </div>    
                                 </div>

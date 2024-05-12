@@ -7,6 +7,10 @@
   src: url('/src/fonts/Montserrat-Regular.ttf');
 }
 @font-face {
+  font-family: 'Montserrat-Bold';
+  src: url('/src/fonts/Montserrat-Bold.ttf');
+}
+@font-face {
   font-family: 'Borel';
   src: url('/src/fonts/Borel-Regular.ttf');
 }
@@ -33,7 +37,7 @@ body {
   user-select: none;
 }
 ::-webkit-scrollbar {
-  display: none;
+  /* display: none; */
 }
 
 @media screen and (max-width: 576px) {

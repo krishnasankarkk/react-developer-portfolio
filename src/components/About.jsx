@@ -1,10 +1,18 @@
+import './About.css'
+
 function About(props) {
+    const handleMousePointer = () => {
+        props.setMousePointer(true)
+    }
+        const handleMousePointerLeave = () => {
+        props.setMousePointer(false)
+    }
     return (
         <div 
             className="flex flex-col items-center justify-center w-[100%] h-full z-0"
             id="about"
         >
-            <div className={`background blur-3xl opacity-15 w-[600px] h-[500px] ${props.theme ? 'bg-blue' : 'bg-green'} rounded-full`}></div>
+            <div className={`background blur-3xl opacity-15 w-[600px] h-[500px] ${props.theme ? 'bg-blue' : 'bg-green -z-50'} rounded-full`}></div>
             <p className="font-extrabold text-sm md:text-xl"><span className={`${props.theme ? 'text-blue' : 'text-green'}`}>SOFTWARE</span> DEVELOPER</p>
             <p className='p-4 text-3xl md:text-6xl font-bold flex flex-col text-center md:flex-row gap-4'>
             Hey, It&apos;s me <span className={`flex flex-col items-center ${props.theme ? 'text-blue' : 'text-green'}`}>
@@ -16,8 +24,14 @@ function About(props) {
             </p>
             <br />
             <p className="font-semibold mb-2">Connect with me</p>
-            <span className="flex flex-row gap-4">
-                <a className="cursor-none" href="https://www.linkedin.com/in/krishnasankarkk/">
+            <span 
+                className="flex flex-row gap-4"
+                onMouseEnter={handleMousePointer}
+                onMouseLeave={handleMousePointerLeave}
+            >
+                <a 
+                    className="cursor-none" href="https://www.linkedin.com/in/krishnasankarkk/"
+                >
                     <img 
                         src={`${props.theme ? 'linkedin-dark.png' : 'linkedin1.png'}`} 
                         alt="" 
@@ -48,7 +62,11 @@ function About(props) {
             </span>
             <br />
             <p className="font-semibold mb-2">Or</p>
-            <a className="font-semibold cursor-none flex flex-row gap-1 items-center transition-all duration-200 hover:scale-95" href="mailto:krishnasankarofficial@gmail.com">
+            <a 
+                className="font-semibold cursor-none flex flex-row gap-1 items-center transition-all duration-200 hover:scale-95" href="mailto:krishnasankarofficial@gmail.com"
+                onMouseEnter={handleMousePointer}
+                onMouseLeave={handleMousePointerLeave}
+            >
                 <img 
                     src={`${props.theme ? 'plane-blue.png' : 'plane-green.png'}`} 
                     alt="" 
@@ -56,7 +74,11 @@ function About(props) {
                 />
                 <span className={`${props.theme ? 'text-dark' : 'text-light'}`}>krishnasankarofficial@gmail.com</span>
             </a>
-            <a className="font-semibold cursor-none flex flex-row gap-1 items-center transition-all duration-200 hover:scale-95" href="tel:+917306310132">
+            <a 
+                className="font-semibold cursor-none flex flex-row gap-1 items-center transition-all duration-200 hover:scale-95" href="tel:+917306310132"
+                onMouseEnter={handleMousePointer}
+                onMouseLeave={handleMousePointerLeave}
+            >
                 <img 
                     src={`${props.theme ? 'phone-blue.png' : 'phone-green.png'}`} 
                     alt="" 

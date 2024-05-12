@@ -1,8 +1,24 @@
 #cursor {
-    z-index: 999999;
+    z-index: 999;
 }
 .percentbar {
     animation: fill 1s ease-out;
+}
+.theme-menu {
+    animation: fallDown .5s ease-out;
+}
+@keyframes fallDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20%);
+        scale: 0;
+        transform-origin: top;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+        scale: 100%;
+    }
 }
 @keyframes fill {
     from {

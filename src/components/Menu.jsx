@@ -7,7 +7,7 @@ function Menu(props) {
     props.setShowMenu(!props.showMenu)
     const option1 = document.getElementById('option1')
     const option2 = document.getElementById('option2')
-    if(!showMenu){
+    if(!props.showMenu){
       option1.classList.add('selected')
       option2.classList.add('selected')
     }else{
@@ -15,18 +15,31 @@ function Menu(props) {
       option2.classList.remove('selected')
     }
   }
+  const handleMousePointer = () => {
+    props.setMousePointer(true)
+  }
+  const handleMousePointerLeave = () => {
+    props.setMousePointer(false)
+  }
   const handleResumeEnter = () => {
+    handleMousePointer()
     const downloadImage = document.getElementById('download')
     downloadImage.src = props.theme ? 'down-blue.png' : 'down-green.png'
   }
   const handleResumeLeave = () => {
+    handleMousePointerLeave()
     const downloadImage = document.getElementById('download')
     downloadImage.src = props.theme ? 'down-black.png' : 'down-white.png'
   }
 
     return (
       <div className="options relative z-0 text-xl">
-        <div className="flex flex-col gap-2 items-end p-8 z-0" onMouseDownCapture={handleMouseDown}>
+        <div 
+          className="flex flex-col gap-2 items-end p-8 z-0" 
+          onMouseDownCapture={handleMouseDown}
+          onMouseEnter={handleMousePointer} 
+          onMouseLeave={handleMousePointerLeave} 
+        >
           <div id="option1" className={`${props.theme ? 'bg-dark' : 'bg-light'} w-[2rem] h-1 rounded-full`}></div>
           <div id="option2" className={`${props.theme ? 'bg-dark' : 'bg-light'} w-[1rem] h-1 rounded-full`}></div>
         </div>
@@ -35,34 +48,49 @@ function Menu(props) {
             <a
               href={Resume} 
               download="Resume-Krishnasankar.pdf"
-              className={`transition-all duration-200 hover:scale-110 ${props.theme ? 'hover:text-blue' : 'hover:text-green'} cursor-none flex flex-row items-center justify-start gap-2 mr-4`}
+              className={`hover:scale-110 ${props.theme ? 'hover:text-blue' : 'hover:text-green'} cursor-none flex flex-row items-center justify-start gap-2 mr-4`}
               onMouseEnter={handleResumeEnter}
               onMouseLeave={handleResumeLeave}
             >
               Resume
-              <img id="download" className="w-4 h-4" src={`${props.theme ? 'down-black.png' : 'down-white.png'}`} alt="" />
+              <img id="download" className="w-4 h-4  transition-all duration-300" src={`${props.theme ? 'down-black.png' : 'down-white.png'}`} alt="" />
             </a>
+            <span
+              className={`menu-item hover:scale-110 ${props.onPage == 'about' ? `${props.theme ? 'text-blue' : 'text-green'}` : ''} ${props.theme ? 'hover:text-blue' : 'hover:text-green'}`}
+              onMouseDownCapture={props.menuChange}
+              id="about"
+              onMouseEnter={handleMousePointer} 
+              onMouseLeave={handleMousePointerLeave} 
+            >
+            About</span>
             <span 
-              className={`transition-all duration-200 hover:scale-110 ${props.theme ? 'hover:text-blue' : 'hover:text-green'}`}
+              className={`menu-item hover:scale-110 ${props.onPage == 'skills' ? `${props.theme ? 'text-blue' : 'text-green'}` : ''} ${props.theme ? 'hover:text-blue' : 'hover:text-green'}`}
               onMouseDownCapture={props.menuChange}
               id="skills"
+              onMouseEnter={handleMousePointer} 
+              onMouseLeave={handleMousePointerLeave} 
             >
             Skills</span>
             <span 
-              className={`transition-all duration-200 hover:scale-110 ${props.theme ? 'hover:text-blue' : 'hover:text-green'}`}
+              className={`menu-item hover:scale-110 ${props.onPage == 'experience' ? `${props.theme ? 'text-blue' : 'text-green'}` : ''} ${props.theme ? 'hover:text-blue' : 'hover:text-green'}`}
               onMouseDownCapture={props.menuChange}
               id="experience"
+              onMouseEnter={handleMousePointer} 
+              onMouseLeave={handleMousePointerLeave} 
             >Experience</span>
             <span 
-              className={`transition-all duration-200 hover:scale-110 ${props.theme ? 'hover:text-blue' : 'hover:text-green'}`}
+              className={`menu-item hover:scale-110 ${props.onPage == 'projects' ? `${props.theme ? 'text-blue' : 'text-green'}` : ''} ${props.theme ? 'hover:text-blue' : 'hover:text-green'}`}
               onMouseDownCapture={props.menuChange}
               id="projects"
+              onMouseEnter={handleMousePointer} 
+              onMouseLeave={handleMousePointerLeave} 
             >Projects</span>
-            {/* <span className={`transition-all duration-200 hover:scale-110 ${props.theme ? 'hover:text-blue' : 'hover:text-green'}`}>Blogs</span> */}
             <span 
-              className={`transition-all duration-200 hover:scale-110 ${props.theme ? 'hover:text-blue' : 'hover:text-green'}`}
+              className={`menu-item hover:scale-110 ${props.onPage == 'contact' ? `${props.theme ? 'text-blue' : 'text-green'}` : ''} ${props.theme ? 'hover:text-blue' : 'hover:text-green'}`}
               onMouseDownCapture={props.menuChange}
               id="contact"
+              onMouseEnter={handleMousePointer}
+              onMouseLeave={handleMousePointerLeave}
             >Contact</span>
           </div>
         ) : (

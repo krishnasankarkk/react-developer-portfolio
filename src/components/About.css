@@ -1,7 +1,6 @@
-.skills {
+#about {
     animation: fadeOut 1s ease-out;
 }
-
 @keyframes fadeOut {
     from {
         opacity: 0;
@@ -9,8 +8,4 @@
     to {
         opacity: 1;
     }
-}
-
-@media screen and (max-width:576px) {
-    
 }

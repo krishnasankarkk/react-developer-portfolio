@@ -1,11 +1,13 @@
 .timeline {
-    animation: scaleX .4s ease-out;
+    animation: scaleX 1s ease-out;
 }
 @keyframes scaleX {
     0% {
+        opacity: 0;
         transform: scaleX(0);
     }
     100% {
+        opacity: 1;
         transform: scaleX(100%);
     }
 }
@@ -24,3 +26,4 @@
         display: flex !important;
     }
 }
+

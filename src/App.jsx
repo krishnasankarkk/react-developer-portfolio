@@ -18,6 +18,8 @@ function App() {
   const [isLightMode, setIsLightMode] = useState(false)
   const [onPage, setOnPage] = useState('home')
   const [showMenu, setShowMenu] = useState(false)
+  const [mousePointer, setMousePointer] = useState(false)
+  const theme = document.getElementById("theme")
 
   useLayoutEffect(()=>{
     setTimeout(() => {
@@ -27,9 +29,22 @@ function App() {
 
   const changeTheme = () => {
     setIsLightMode(!isLightMode)
+    if(!isLightMode) {
+      theme.classList.remove('-translate-y-0')
+      theme.classList.add(`translate-y-8`)
+    }else {
+      theme.classList.remove('translate-y-8')
+      theme.classList.add(`-translate-y-0`)
+    }
   }
   const handleMenuChange = (e) => {
     setOnPage(e.currentTarget.id)
+  }
+  const handlemousePointer = (bool) => {
+    setMousePointer(bool)
+  }
+  const handlemousePointerLeave = (bool) => {
+    setMousePointer(false)
   }
   // const rippleContainer = document.getElementById('ripple-container');
   // const ripple1 = document.getElementById('ripple1');
@@ -53,10 +68,13 @@ function App() {
 
   return (
     <div 
-      className={`z-0 w-full h-[100vh] relative flex flex-col overflow-hidden items-center justify-center ${isLightMode ? 'bg-light text-dark' : 'bg-dark'}`}
+      className={`transition-all duration-300 z-0 w-full h-[100vh] relative flex flex-col overflow-hidden items-center justify-center ${isLightMode ? 'bg-light text-dark' : 'bg-dark'}`}
     >
     <br /><br />
-      <CustomCursor theme={isLightMode}/>
+      <CustomCursor 
+        theme={isLightMode}
+        mousePointer={mousePointer} 
+      />
       {loading ? (
         <Loading />
       ):(<></>)}
@@ -64,27 +82,43 @@ function App() {
         theme={isLightMode} 
         menuChange={handleMenuChange} 
         showMenu={showMenu}  
-        setShowMenu={setShowMenu}  
+        onPage={onPage}  
+        setShowMenu={setShowMenu} 
+        setMousePointer={handlemousePointer}
       />
       {onPage == 'home' ? (
+        <About 
+          theme={isLightMode} 
+          setMousePointer={handlemousePointer}
+        />
+      ) : onPage == 'about' ? (
         <About theme={isLightMode} />
       ) : onPage == 'skills' ? (
         <Skills theme={isLightMode} />
       ) : onPage == 'experience' ? (
         <Experience theme={isLightMode} />
       ) : onPage == 'projects' ? (
-        <Projects theme={isLightMode} />
+        <Projects theme={isLightMode} setMousePointer={handlemousePointer} />
       ) : onPage == 'contact' ? (
         <Contact theme={isLightMode} />
       ) : (
         <></>
       )}
       <Footer theme={isLightMode} />
-      <img 
-        className='fixed top-20 right-6 z-50'
-        src={`${isLightMode?'moon.png' : 'sun.png'}`} 
-        alt="Theme"
-        onMouseDownCapture={changeTheme} />
+      <div 
+        className={`fixed top-20 right-6 w-8 h-16 z-50 ${isLightMode ? 'bg-dark' : 'bg-light'} bg-opacity-40 rounded-full`}
+        onMouseDownCapture={changeTheme}
+        onMouseEnter={handlemousePointer} 
+        onMouseLeave={handlemousePointerLeave} 
+      >
+        <img 
+          className='absolute w-6 h-6 top-[2px] right-1 z-[99] transition-all duration-300'
+          src={`${isLightMode?'sun.png' : 'moon.png'}`} 
+          alt="Theme"
+          id="theme"
+          onMouseDownCapture={changeTheme}
+        />
+      </div>
       {/* <div 
         className="ripple-container hidden z-10"
         id='ripple-container'
