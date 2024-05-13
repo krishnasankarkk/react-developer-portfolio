@@ -1,11 +1,25 @@
 import { useState, useRef } from 'react'
+
 import './Projects.css'
 
 function Projects(props) {
     const projects = [
-        { name: 'Kwikmart Online Shopping', image:'projects/kwikmart.png' },
-        { name: 'Kwikmart Online Shopping', image:'projects/kwikmart.png' },
-        { name: 'Kwikmart Online Shopping', image:'projects/kwikmart.png' },
+        { 
+            name: 'Kwikmart Online Shopping',
+            image:'projects/kwikmart.png',
+            url:'https://kwikmart.one',
+            repoUrl:'https://github.com/krishnasankarkk/django-kwikmart',
+        },
+        { 
+            name: 'Keralagram Social Network',
+            image:'projects/keralagram.png',
+            repoUrl:'https://github.com/krishnasankarkk/django-keralagram',
+        },
+        { 
+            name: 'Vendor Management System',
+            image:'projects/vendor.png',
+            repoUrl:'https://github.com/krishnasankarkk/vendor-management-system',
+        },
     ]
     const [showDetails, setShowDetails] = useState(Array(projects.length).fill(false));
     const containerRef = useRef(null)
@@ -32,20 +46,20 @@ function Projects(props) {
     const handleMousePointerLeave = () => {
         props.setMousePointer(false)
     }
-    const scrollProjectsLeft = () => {
-        if(containerRef.current){
-            containerRef.current.scrollLeft -= 20
-        }
-    }
-    const scrollProjectsRight = () => {
-        if(containerRef.current){
-            containerRef.current.scrollLeft += 20
-        }
-    }
+    // const scrollProjectsLeft = () => {
+    //     if(containerRef.current){
+    //         containerRef.current.scrollLeft -= 20
+    //     }
+    // }
+    // const scrollProjectsRight = () => {
+    //     if(containerRef.current){
+    //         containerRef.current.scrollLeft += 20
+    //     }
+    // }
 
     return (
         <div 
-            className="skills flex flex-col items-center justify-center w-[100%] h-full z-40 mt-16 md:m-0"
+            className="skills flex flex-col items-center justify-center w-[100%] h-full z-40 mt-0 overflow-auto"
             id=""
         >
         <br />
@@ -53,13 +67,13 @@ function Projects(props) {
             <p className="font-extrabold text-xl"><span className={`${props.theme ? 'text-blue' : 'text-green'}`}>PROJECTS</span></p>
             <br />
             <div 
-                className="flex flex-row w-[95%] overflow-x-scroll gap-4 items-start justify-start"
+                className="flex flex-col w-[90%] overflow-y-scroll gap-4 items-center justify-start"
                 ref={containerRef}
             >
                 {projects.map((project, index) => (
                     <div 
                         key={index}
-                        className={`project relative flex flex-col ${props.theme ? 'bg-blue' : 'bg-green'} bg-opacity-20 rounded-xl w-[900px] h-[510px]`}
+                        className={`project relative flex flex-col ${props.theme ? 'bg-light' : 'bg-dark'} rounded-xl w-[90%] h-[44%] md:w-[60%] md:h-[500px]`}
                         onMouseEnter={() => handleMouseEnter(index)}
                         onMouseLeave={() => handleMouseLeave(index)}
                     >
@@ -70,16 +84,36 @@ function Projects(props) {
                         />
                         {/* Conditional rendering of project-details based on showDetails state */}
                         {showDetails[index] && (
-                            <span 
-                                className={`flex flex-row gap-4 project-details absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ${props.theme ? 'text-blue' : 'text-green'} font-extrabold font-[Poppins] text-3xl`} 
-                            >
-                                {project.name}
-                                <img 
-                                    src={`${props.theme ? 'expand.png' : 'expand-green.png'}`} 
-                                    alt="" 
-                                    className='w-8 h-8'                
-                                />
-                            </span>
+                            <div className='absolute w-full h-full flex flex-col items-center justify-center gap-4'>
+                                {project.url && (
+                                    <a
+                                        href={project.url}
+                                        target='_blank'
+                                        rel='noopener' 
+                                        className={`cursor-none flex flex-row gap-4 project-details ${props.theme ? 'text-blue' : 'text-green'} font-extrabold font-[Poppins] md:text-3xl text-xl`} 
+                                    >
+                                        {project.name}
+                                        <img 
+                                            src={`${props.theme ? 'expand.png' : 'expand-green.png'}`} 
+                                            alt="" 
+                                            className='md:w-8 md:h-8 w-6 h-6'                
+                                        />
+                                    </a>
+                                )}
+                                <a
+                                    href={project.repoUrl}
+                                    target='_blank'
+                                    rel='noopener' 
+                                    className={`cursor-none flex flex-row gap-4 project-details ${props.theme ? 'text-blue' : 'text-green'} font-extrabold font-[Poppins] md:text-3xl text-xl`} 
+                                >
+                                    Github Repo
+                                    <img 
+                                        src={`${props.theme ? 'expand.png' : 'expand-green.png'}`} 
+                                        alt="" 
+                                        className='md:w-8 md:h-8 w-6 h-6'                
+                                    />
+                                </a>
+                            </div>
                         )}
                     </div>
                 ))}
