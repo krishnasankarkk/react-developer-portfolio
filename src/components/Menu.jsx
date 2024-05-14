@@ -1,4 +1,3 @@
-import { useState } from "react"
 import Resume from '../assets/Resume - Krishnasankar.pdf'
 
 function Menu(props) {
@@ -58,7 +57,7 @@ function Menu(props) {
               Resume
               <img id="download" className="w-4 h-4  transition-all duration-300" src={`${props.theme ? 'down-black.png' : 'down-white.png'}`} alt="" />
             </a>
-            <span
+            <span 
               className={`menu-item hover:scale-110 ${props.onPage == 'about' ? `${props.theme ? 'text-blue' : 'text-green'}` : ''} ${props.theme ? 'hover:text-blue' : 'hover:text-green'}`}
               onMouseDownCapture={handleToggleMenu}
               id="about"

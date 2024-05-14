@@ -31,7 +31,7 @@
     }
 }
 .background {
-    animation: scale 8s ease-out alternate;
+    animation: scale 4s ease-out alternate;
     position: fixed;
     top: 25%;
     left: 30%;

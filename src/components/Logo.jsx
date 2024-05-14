@@ -1,8 +1,12 @@
 function Logo(props) {
+  const handleToggleMenu = (e) => {
+    if(e.currentTarget.id)
+      props.menuChange(e.currentTarget.id)
+  }
     return (
       <div 
         className='flex flex-row gap-1 font-bold text-sm md:text-2xl relative w-[18rem] p-8'
-        onMouseDownCapture={props.menuChange}
+        onMouseDownCapture={handleToggleMenu}
         id="home"
       >
         <span className="letter">k</span>

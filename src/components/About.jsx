@@ -10,9 +10,9 @@ function About(props) {
     return (
         <div 
             className="flex flex-col items-center justify-center w-[100%] h-full z-0"
-            id="about"
+            id="about-section"
         >
-            <div className={`background blur-3xl opacity-15 w-[600px] h-[500px] ${props.theme ? 'bg-blue' : 'bg-green -z-50'} rounded-full`}></div>
+            <div className={`background blur-3xl opacity-15 w-[600px] h-[500px] ${props.theme ? 'bg-blue' : 'bg-green'} rounded-full -z-50`}></div>
             <p className="font-extrabold text-sm md:text-xl"><span className={`${props.theme ? 'text-blue' : 'text-green'}`}>SOFTWARE</span> DEVELOPER</p>
             <p className='p-4 text-3xl md:text-6xl font-bold flex flex-col text-center md:flex-row gap-4'>
             Hey, It&apos;s me <span className={`flex flex-col items-center ${props.theme ? 'text-blue' : 'text-green'}`}>
@@ -41,7 +41,7 @@ function About(props) {
                 <a className="cursor-none" href="https://www.instagram.com/artbykichu">
                     <img 
                         src={`${props.theme ? 'insta-b.png' : 'insta-w.png'}`} 
-                        alt="" 
+                        alt=""
                         className="transition-all duration-200 hover:-translate-y-1"
                     />
                 </a>
