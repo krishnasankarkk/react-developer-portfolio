@@ -3,7 +3,9 @@ import Resume from '../assets/Resume - Krishnasankar.pdf'
 
 function Menu(props) {
   
-  const handleMouseDown = () => {
+  const handleToggleMenu = (e) => {
+    if(e.currentTarget.id)
+      props.menuChange(e.currentTarget.id)
     props.setShowMenu(!props.showMenu)
     const option1 = document.getElementById('option1')
     const option2 = document.getElementById('option2')
@@ -36,7 +38,7 @@ function Menu(props) {
       <div className="options relative z-0 text-xl">
         <div 
           className="flex flex-col gap-2 items-end p-8 z-0" 
-          onMouseDownCapture={handleMouseDown}
+          onMouseDownCapture={handleToggleMenu}
           onMouseEnter={handleMousePointer} 
           onMouseLeave={handleMousePointerLeave} 
         >
@@ -51,13 +53,14 @@ function Menu(props) {
               className={`hover:scale-110 ${props.theme ? 'hover:text-blue' : 'hover:text-green'} cursor-none flex flex-row items-center justify-start gap-2 mr-4`}
               onMouseEnter={handleResumeEnter}
               onMouseLeave={handleResumeLeave}
+              onMouseDownCapture={handleToggleMenu}
             >
               Resume
               <img id="download" className="w-4 h-4  transition-all duration-300" src={`${props.theme ? 'down-black.png' : 'down-white.png'}`} alt="" />
             </a>
             <span
               className={`menu-item hover:scale-110 ${props.onPage == 'about' ? `${props.theme ? 'text-blue' : 'text-green'}` : ''} ${props.theme ? 'hover:text-blue' : 'hover:text-green'}`}
-              onMouseDownCapture={props.menuChange}
+              onMouseDownCapture={handleToggleMenu}
               id="about"
               onMouseEnter={handleMousePointer} 
               onMouseLeave={handleMousePointerLeave} 
@@ -65,7 +68,7 @@ function Menu(props) {
             About</span>
             <span 
               className={`menu-item hover:scale-110 ${props.onPage == 'skills' ? `${props.theme ? 'text-blue' : 'text-green'}` : ''} ${props.theme ? 'hover:text-blue' : 'hover:text-green'}`}
-              onMouseDownCapture={props.menuChange}
+              onMouseDownCapture={handleToggleMenu}
               id="skills"
               onMouseEnter={handleMousePointer} 
               onMouseLeave={handleMousePointerLeave} 
@@ -73,21 +76,21 @@ function Menu(props) {
             Skills</span>
             <span 
               className={`menu-item hover:scale-110 ${props.onPage == 'experience' ? `${props.theme ? 'text-blue' : 'text-green'}` : ''} ${props.theme ? 'hover:text-blue' : 'hover:text-green'}`}
-              onMouseDownCapture={props.menuChange}
+              onMouseDownCapture={handleToggleMenu}
               id="experience"
               onMouseEnter={handleMousePointer} 
               onMouseLeave={handleMousePointerLeave} 
             >Experience</span>
             <span 
               className={`menu-item hover:scale-110 ${props.onPage == 'projects' ? `${props.theme ? 'text-blue' : 'text-green'}` : ''} ${props.theme ? 'hover:text-blue' : 'hover:text-green'}`}
-              onMouseDownCapture={props.menuChange}
+              onMouseDownCapture={handleToggleMenu}
               id="projects"
               onMouseEnter={handleMousePointer} 
               onMouseLeave={handleMousePointerLeave} 
             >Projects</span>
             <span 
               className={`menu-item hover:scale-110 ${props.onPage == 'contact' ? `${props.theme ? 'text-blue' : 'text-green'}` : ''} ${props.theme ? 'hover:text-blue' : 'hover:text-green'}`}
-              onMouseDownCapture={props.menuChange}
+              onMouseDownCapture={handleToggleMenu}
               id="contact"
               onMouseEnter={handleMousePointer}
               onMouseLeave={handleMousePointerLeave}
