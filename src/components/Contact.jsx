@@ -58,8 +58,8 @@ function Contact(props) {
         <br />
            <p className="font-extrabold md:text-xl text-lg"><span className={`${props.theme ? 'text-blue' : 'text-green'}`}>CONTACT</span></p>
            <br />
-            <span className="font-[Montserrat-Bold] text-5xl mb-4 text-center">Let&apos;s Get In Touch</span>
-           <div className="flex flex-col gap-1 overflow-auto md:w-[60%] w-[100%] h-auto md:p-4 p-1 rounded-3xl transition-all duration-700" ref={containerRef}>
+            <span className="font-[Montserrat-Bold] md:text-5xl text-3xl mb-4 text-center">Let&apos;s Get In Touch</span>
+           <div className="flex flex-col gap-1 overflow-auto md:w-[60%] w-[96%] h-auto md:p-4 p-1 rounded-3xl transition-all duration-700" ref={containerRef}>
                 <br /><br />
                 <span className={`font-bold md:text-xl text-lg ${props.theme ? 'bg-blue' : 'bg-green'} bg-opacity-40 p-4 md:rounded-full rounded-2xl rounded-bl-none w-fit min-w-14 flex items-center justify-center pl-4 pr-4 md:pl-6 md:pr-6`}
                 >Hi</span>
@@ -101,7 +101,7 @@ function Contact(props) {
                 )}
                 <br />
            </div>
-            <div className="flex items-center justify-center mt-8 md:w-[60%] w-[98%]">
+            <div className="flex items-center justify-center mt-8 md:w-[60%] w-[96%]">
                 {!showName && (
                     <input 
                         className={`w-full ${props.theme ? 'bg-dark text-dark' : 'bg-light text-light'} pl-4 bg-opacity-20 font-bold md:text-xl text-lg border-none p-4 focus:outline-none rounded-2xl md:rounded-full`}

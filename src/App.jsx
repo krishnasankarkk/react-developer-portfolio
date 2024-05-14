@@ -86,7 +86,7 @@ function App() {
       )}
       <Footer theme={isLightMode} />
       <div 
-        className={`fixed top-20 right-6 w-8 h-16 z-50 ${isLightMode ? 'bg-dark' : 'bg-light'} bg-opacity-40 rounded-full`}
+        className={`fixed md:top-20 top-16 md:right-6 right-2 w-8 h-16 z-50 ${isLightMode ? 'bg-dark' : 'bg-light'} bg-opacity-40 rounded-full`}
         onMouseDownCapture={changeTheme}
         onMouseEnter={handlemousePointer} 
         onMouseLeave={handlemousePointerLeave} 

@@ -5,7 +5,7 @@ function Logo(props) {
   }
     return (
       <div 
-        className='flex flex-row gap-1 font-bold text-sm md:text-2xl relative w-[18rem] p-8'
+        className='flex flex-row gap-1 font-bold text-sm md:text-2xl relative w-[18rem] md:p-8 p-4'
         onMouseDownCapture={handleToggleMenu}
         id="home"
       >

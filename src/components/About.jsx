@@ -35,28 +35,28 @@ function About(props) {
                     <img 
                         src={`${props.theme ? 'linkedin-dark.png' : 'linkedin1.png'}`} 
                         alt="" 
-                        className="transition-all duration-200 hover:-translate-y-1"
-                    />
-                </a>
-                <a className="cursor-none" href="https://www.instagram.com/artbykichu">
-                    <img 
-                        src={`${props.theme ? 'insta-b.png' : 'insta-w.png'}`} 
-                        alt=""
-                        className="transition-all duration-200 hover:-translate-y-1"
-                    />
-                </a>
-                <a className="cursor-none" href="https://api.whatsapp.com/send?phone=917306310132">
-                    <img 
-                        src={`${props.theme ? 'whatsapp.png' : 'whatsapp2.png'}`} 
-                        alt="" 
-                        className="transition-all duration-200 hover:-translate-y-1"
+                        className="w-10 h-10 transition-all duration-200 hover:-translate-y-1"
                     />
                 </a>
                 <a className="cursor-none" href="https://github.com/krishnasankarkk">
                     <img 
                         src={`${props.theme ? 'github-sign.png' : 'github-sign1.png'}`} 
                         alt="" 
-                        className="transition-all duration-200 hover:-translate-y-1"
+                        className="w-10 h-10 transition-all duration-200 hover:-translate-y-1"
+                    />
+                </a>
+                <a className="cursor-none" href="https://www.instagram.com/artbykichu">
+                    <img 
+                        src={`${props.theme ? 'insta-b.png' : 'insta-w.png'}`} 
+                        alt=""
+                        className="w-10 h-10 transition-all duration-200 hover:-translate-y-1"
+                    />
+                </a>
+                <a className="cursor-none" href="https://api.whatsapp.com/send?phone=917306310132">
+                    <img 
+                        src={`${props.theme ? 'whatsapp.png' : 'whatsapp2.png'}`} 
+                        alt="" 
+                        className="w-10 h-10 transition-all duration-200 hover:-translate-y-1"
                     />
                 </a>
             </span>

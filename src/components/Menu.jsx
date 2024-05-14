@@ -36,7 +36,7 @@ function Menu(props) {
     return (
       <div className="options relative z-0 text-xl">
         <div 
-          className="flex flex-col gap-2 items-end p-8 z-0" 
+          className="flex flex-col gap-2 items-end md:p-8 p-4 z-0" 
           onMouseDownCapture={handleToggleMenu}
           onMouseEnter={handleMousePointer} 
           onMouseLeave={handleMousePointerLeave} 
