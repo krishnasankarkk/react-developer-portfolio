@@ -72,10 +72,9 @@ src/
 ├── pages/          # Page components
 ├── App.css         # Styles for App.jsx
 ├── App.jsx         # Main application component
-├── main.css       # Styles for main.jsx
+├── index.css        # Styles for main.jsx
 ├── main.jsx        # Entry point for the application
 ├── router.jsx      # React Router setup
-public/
 ├── index.html      # HTML template
 dist/               # Production build output
 ```
