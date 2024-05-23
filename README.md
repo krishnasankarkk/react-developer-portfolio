@@ -134,7 +134,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 If you have any questions or suggestions regarding this project, feel free to contact me:
 
-Your Name - [your.email@example.com](mailto:your.email@example.com)
+Krishnasankar K K - [krishnasankarofficial@gmail.com](mailto:krishnasankarofficial@gmail.com)
 
 You can also find the project on GitHub: [https://github.com/krishnasankarkk/react-developer-portfolio](https://github.com/krishnasankarkk/react-developer-portfolio)
 
