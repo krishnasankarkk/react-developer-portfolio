@@ -1,4 +1,4 @@
-import Resume from '../assets/Resume - Krishnasankar.pdf'
+import Resume from '../assets/pdf/Resume - Krishnasankar.pdf'
 
 function Menu(props) {
   
