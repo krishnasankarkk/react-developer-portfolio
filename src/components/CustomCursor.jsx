@@ -24,9 +24,9 @@ const CustomCursor = (props) => {
     style={{ left: position.x, top: position.y }}
   >
   {props.theme ? (
-    <div className={`pointer-events-none bg-blue ${props.mousePointer ? 'border-[.4rem] scale-150 duration-150 border-blue bg-dark' : ''} absolute transition-all duration-1000 w-4 h-4 rounded-full rotate-12`} ></div>
+    <div className={`pointer-events-none ${props.mousePointer ? 'border-[.4rem] scale-150 duration-150 border-blue bg-dark' : 'bg-blue'} absolute transition-all duration-1000 w-4 h-4 rounded-full rotate-12`} ></div>
   ) : (
-    <div className={`pointer-events-none bg-green ${props.mousePointer ? 'border-[.4rem] scale-150 duration-150 border-green bg-[black]' : ''} absolute transition-all duration-1000 w-4 h-4 rounded-full rotate-12`} ></div>
+    <div className={`pointer-events-none ${props.mousePointer ? 'border-[.4rem] scale-150 duration-150 border-green bg-dark' : 'bg-green '} absolute transition-all duration-1000 w-4 h-4 rounded-full rotate-12`} ></div>
   )}
   </div>
   );
