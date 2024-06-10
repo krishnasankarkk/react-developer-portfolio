@@ -55,16 +55,6 @@ function Projects(props) {
     const handleMousePointerLeave = () => {
         props.setMousePointer(false)
     }
-    // const scrollProjectsLeft = () => {
-    //     if(containerRef.current){
-    //         containerRef.current.scrollLeft -= 20
-    //     }
-    // }
-    // const scrollProjectsRight = () => {
-    //     if(containerRef.current){
-    //         containerRef.current.scrollLeft += 20
-    //     }
-    // }
 
     return (
         <div 
@@ -79,7 +69,7 @@ function Projects(props) {
                 className="flex flex-col w-[90%] overflow-y-scroll gap-4 items-center justify-start"
                 ref={containerRef}
             >
-                <p className="font-bold text-xl md:w-[60%] w-[90%] text-justify">
+                <p className="font-bold text-sm md:text-xl md:w-[60%] w-[90%] text-start">
                     Explore a showcase of my diverse range of projects, each meticulously crafted to solve real-world problems.
                     These projects reflect my passion for technology and creativity.
                 </p>
@@ -102,14 +92,15 @@ function Projects(props) {
                                     href={project.url ? project.url : project.repoUrl}
                                     target='_blank'
                                     rel='noopener' 
-                                    className={`cursor-none flex flex-row gap-4 project-details ${props.theme ? 'text-blue' : 'text-green'} font-extrabold font-[Poppins] md:text-3xl text-xl`} 
+                                    className={`cursor-none flex flex-row items-center justify-center gap-4 project-details ${props.theme ? 'text-blue' : 'text-green'}
+                                    font-extrabold font-[Poppins] md:text-xl text-sm`}
                                 >
                                     {project.name}
                                     {project.url && (
                                         <img 
                                             src={`${props.theme ? 'expand.png' : 'expand-green.png'}`} 
                                             alt="" 
-                                            className='md:w-8 md:h-8 w-6 h-6'                
+                                            className='md:w-5 md:h-5 w-4 h-4'
                                         />
                                     )}
                                 </a>
@@ -117,20 +108,21 @@ function Projects(props) {
                                     href={project.repoUrl}
                                     target='_blank'
                                     rel='noopener' 
-                                    className={`cursor-none flex flex-row gap-4 project-details ${props.theme ? 'text-blue' : 'text-green'} font-extrabold font-[Poppins] md:text-3xl text-xl`} 
+                                    className={`cursor-none flex flex-row items-center justify-center gap-4 project-details ${props.theme ? 'text-blue' : 'text-green'}
+                                    font-extrabold font-[Poppins] md:text-xl text-sm`}
                                 >
                                     Github Repo
                                     <img 
                                         src={`${props.theme ? 'expand.png' : 'expand-green.png'}`} 
                                         alt="" 
-                                        className='md:w-8 md:h-8 w-6 h-6'                
+                                        className='md:w-5 md:h-5 w-4 h-4'
                                     />
                                 </a>
-                                <p className='flex flex-row gap-2 flex-wrap'>
+                                <p className='flex flex-row gap-2 flex-wrap m-2 items-center justify-center'>
                                     {project.technologiesUsed.map((item, i)=>(
                                         <span 
                                             key={i} 
-                                            className={`${props.theme ? 'bg-blue text-dark' : 'bg-green text-light'} bg-opacity-20 p-1 rounded-full pl-2 pr-2 text-sm font-bold`}
+                                            className={`${props.theme ? 'bg-blue text-dark' : 'bg-green text-light'} bg-opacity-20 p-1 rounded-full pl-2 pr-2 text-xs md:text-sm font-bold`}
                                         >{item}</span>  
                                     ))}
                                 </p>

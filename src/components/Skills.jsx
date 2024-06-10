@@ -217,8 +217,8 @@ function Skills(props) {
                     </div>
                     <div className={`${props.theme ? 'bg-light' : 'bg-dark'} shadow-md shadow-[black] p-4 rounded-xl w-80 h-auto`}>
                         <span className={`flex flex-row gap-2 items-end font-bold text-xl`}> 
-                            <span className={`${props.theme ? 'text-blue' : 'text-green'} font-bold text-2xl`}>Hosting</span>
-                            Providers
+                            <span className={`${props.theme ? 'text-blue' : 'text-green'} font-bold text-2xl`}>Cloud</span>
+                            Platforms
                         </span>
                         <br />
                         <span className="font-bold flex flex-col items-center justify-evenly gap-2 w-full">

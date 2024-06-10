@@ -47,12 +47,11 @@ function Menu(props) {
         {props.showMenu ? (
           <div className={`${props.theme?'bg-light md:bg-[#00000000]':'bg-dark md:bg-[#00000000]'} menu flex flex-col md:flex-row items-start  justify-start pt-40 gap-6 absolute p-6 md:p-6 md:top-0 md:right-20 top-2 -right-2 h-[100vh] md:h-auto w-auto rounded-xl -z-10`}>
             <a
-              href={Resume} 
-              download="Resume-Krishnasankar.pdf"
+              href={Resume}
+              target='_blank'
               className={`hover:scale-110 ${props.theme ? 'hover:text-blue' : 'hover:text-green'} cursor-none flex flex-row items-center justify-start gap-2 mr-4`}
               onMouseEnter={handleResumeEnter}
               onMouseLeave={handleResumeLeave}
-              onMouseDownCapture={handleToggleMenu}
             >
               Resume
               <img id="download" className="w-4 h-4  transition-all duration-300" src={`${props.theme ? 'down-black.png' : 'down-white.png'}`} alt="" />

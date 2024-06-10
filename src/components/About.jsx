@@ -13,17 +13,17 @@ function About(props) {
             id="about-section"
         >
             <div className={`background blur-3xl opacity-15 w-[600px] h-[500px] ${props.theme ? 'bg-blue' : 'bg-green'} rounded-full -z-50`}></div>
-            <p className="font-extrabold text-sm md:text-xl"><span className={`${props.theme ? 'text-blue' : 'text-green'}`}>SOFTWARE</span> DEVELOPER</p>
-            <p className='p-4 text-3xl md:text-6xl font-bold flex flex-col text-center md:flex-row gap-4'>
+            <span className="font-extrabold text-sm md:text-xl"><span className={`${props.theme ? 'text-blue' : 'text-green'}`}>SOFTWARE</span> DEVELOPER</span>
+            <span className='p-4 text-3xl md:text-6xl font-[Montserrat-Bold] flex flex-col text-center md:flex-row gap-4'>
             Hey, It&apos;s me <span className={`flex flex-col items-center ${props.theme ? 'text-blue' : 'text-green'}`}>
             Krishnasankar
             </span>
-            </p>
-            <p className='text-xl md:text-2xl w-96 p-8 md:p-4 md:w-[50%] text-center'>
+            </span>
+            <span className='text-lg md:text-2xl w-96 p-4 md:p-4 md:w-[50%] text-center'>
             <span className={`${props.theme ? 'text-blue' : 'text-green'}`}>Passionate</span> freelance software developer with a knack for solving complex problems and crafting efficient solutions.
-            </p>
+            </span>
             <br />
-            <p className="font-semibold mb-2">Connect with me</p>
+            <span className="font-semibold mb-2">Connect with me</span>
             <span 
                 className="flex flex-row gap-4"
                 onMouseEnter={handleMousePointer}
@@ -35,33 +35,33 @@ function About(props) {
                     <img 
                         src={`${props.theme ? 'linkedin-dark.png' : 'linkedin1.png'}`} 
                         alt="" 
-                        className="w-10 h-10 transition-all duration-200 hover:-translate-y-1"
+                        className="w-10 h-10 transition-all duration-200 hover:-translate-y-1 rounded-xl"
                     />
                 </a>
                 <a className="cursor-none" href="https://github.com/krishnasankarkk">
                     <img 
                         src={`${props.theme ? 'github-sign.png' : 'github-sign1.png'}`} 
                         alt="" 
-                        className="w-10 h-10 transition-all duration-200 hover:-translate-y-1"
+                        className="w-10 h-10 transition-all duration-200 hover:-translate-y-1 rounded-xl"
                     />
                 </a>
                 <a className="cursor-none" href="https://www.instagram.com/artbykichu">
                     <img 
                         src={`${props.theme ? 'insta-b.png' : 'insta-w.png'}`} 
                         alt=""
-                        className="w-10 h-10 transition-all duration-200 hover:-translate-y-1"
+                        className="w-10 h-10 transition-all duration-200 hover:-translate-y-1 rounded-xl"
                     />
                 </a>
                 <a className="cursor-none" href="https://api.whatsapp.com/send?phone=917306310132">
                     <img 
                         src={`${props.theme ? 'whatsapp.png' : 'whatsapp2.png'}`} 
                         alt="" 
-                        className="w-10 h-10 transition-all duration-200 hover:-translate-y-1"
+                        className="w-10 h-10 transition-all duration-200 hover:-translate-y-1 rounded-xl"
                     />
                 </a>
             </span>
             <br />
-            <p className="font-semibold mb-2">Or</p>
+            <span className="font-semibold mb-2">Or</span>
             <a 
                 className="font-semibold cursor-none flex flex-row gap-1 items-center transition-all duration-200 hover:scale-95" href="mailto:krishnasankarofficial@gmail.com"
                 onMouseEnter={handleMousePointer}

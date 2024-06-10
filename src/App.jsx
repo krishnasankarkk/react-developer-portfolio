@@ -80,7 +80,7 @@ function App() {
       ) : onPage == 'projects' ? (
         <Projects theme={isLightMode} setMousePointer={handlemousePointer} />
       ) : onPage == 'contact' ? (
-        <Contact theme={isLightMode} />
+        <Contact theme={isLightMode} setMousePointer={handlemousePointer} />
       ) : (
         <></>
       )}
