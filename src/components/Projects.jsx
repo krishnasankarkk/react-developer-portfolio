@@ -5,6 +5,13 @@ import './Projects.css'
 function Projects(props) {
     const projects = [
         { 
+            name: 'MyTodoo - A simple Todo App',
+            image:'projects/todo.png',
+            url:'https://mytodoo.vercel.app',
+            repoUrl:'https://github.com/krishnasankarkk/vue-todo-app',
+            technologiesUsed:['HTML', 'CSS', 'TailwindCss', 'VueJS', 'Firebase', 'Git', 'Vercel']
+        },
+        { 
             name: 'Kwikmart - Online Shopping',
             image:'projects/kwikmart.png',
             url:'https://kwikmart.one',
