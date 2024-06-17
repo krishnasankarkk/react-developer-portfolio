@@ -26,7 +26,6 @@ function Logo(props) {
         <span className="letter">d</span>
         <span className="letter">e</span>
         <span className="letter">v</span>
-        {/* <div className={`${props.theme?'bg-dark':'bg-light'} cursor absolute left-2 bottom-8 h-[0.1rem] md:h-1 w-4 rounded-sm`}></div> */}
       </div>
     )
 }

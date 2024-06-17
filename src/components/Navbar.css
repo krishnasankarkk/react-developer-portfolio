@@ -1,8 +1,7 @@
 .letter {
     opacity: 0;
-    animation: reveal 3s forwards 5s infinite;
+    animation: reveal 5s forwards 5s infinite;
 }
-
 
 .letter:nth-child(1) {
     animation-delay: .1s;
