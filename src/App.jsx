@@ -1,3 +1,6 @@
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 import { useState, useLayoutEffect } from 'react'
 
 import Navbar from './components/Navbar'
